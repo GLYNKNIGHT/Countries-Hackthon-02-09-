@@ -12,8 +12,7 @@ function App() {
 
  
 const [searchState, setSearchState] = useState('')
-const [regionState, setRegionState] = useState('')
-
+const [regionState, setRegionState] = useState('All')
 
 function onInput(e){
   setSearchState(e.target.value)
@@ -22,6 +21,7 @@ function onInput(e){
 
 function onSelect(e){
   setRegionState(e.target.value)
+  e.preventDefault()
   console.log(regionState)
 }
 
@@ -37,7 +37,7 @@ function onSelect(e){
       </header>
       <div className="content-display">
       <SearchBar onInput={onInput} onSelect={onSelect} />
-      <List />
+      <List name={searchState} region={regionState}/>
       </div>
     </div>
     </>
