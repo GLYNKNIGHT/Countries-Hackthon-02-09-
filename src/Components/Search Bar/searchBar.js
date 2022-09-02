@@ -4,7 +4,7 @@ export default function SearchBar({onInput, onSelect}){
 
     return<div className="search-bar">
     <input type='text' placeholder='Search Country Here' onChange={onInput} className='text-search'/>
-    <div>
+   
     <select name='Region' id='region' onChange={onSelect} className='region-search'>
        <option disabled selected hidden>Filter by region</option>
        <option value='Africa'>Africa</option>
@@ -13,7 +13,6 @@ export default function SearchBar({onInput, onSelect}){
        <option value='Europe'>Europe</option>
        <option value='Oceania'>Oceania</option>
     </select>
-    </div>
-
+    
     </div>
 }
