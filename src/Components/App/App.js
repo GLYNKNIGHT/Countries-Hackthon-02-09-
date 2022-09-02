@@ -35,8 +35,10 @@ function onSelect(e){
        <h3>Where in the world?</h3>
        
       </header>
+      <div className="content-display">
       <SearchBar onInput={onInput} onSelect={onSelect} />
       <List />
+      </div>
     </div>
     </>
   );
