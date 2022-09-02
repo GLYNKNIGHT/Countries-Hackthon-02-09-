@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  
 }
 
 .App-logo {
@@ -52,7 +52,6 @@
 .list{
   background-color: #d3d4d7;
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap:40px;
   padding-left: 7vw;
@@ -62,9 +61,17 @@
   background-color: white;
   width:15vw;
   height:40vh;
-  
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
+.card-text{
+padding-left: 1rem;
+}
+.image-container{
+height:40% ;
+width:15vw ;
 
-.card img{
-  max-width:100%;
 }
+.image-container img{
+  object-fit:cover;
+    }

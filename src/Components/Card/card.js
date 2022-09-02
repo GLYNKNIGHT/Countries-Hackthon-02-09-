@@ -1,9 +1,15 @@
 export default function Card({name, flag, capital, population, region}){
     return <div className='card'>
+    <div className="image-container">
         <img src={flag} alt={name}></img>
-        <h4>{name}</h4>
-        <p>Capital City:{capital}</p>
-        <p>Population:{population}</p>
-        <p>Region: {region}</p>
+        </div>   
+        <div className="card-text">
+        <h3>{name}</h3>
+        <p><strong>Population:</strong> {population}</p>
+        <p><strong>Region:</strong> {region}</p>
+        <p><strong>Capital City:</strong> {capital}</p>
+        
+        
+    </div>
     </div>
 }
