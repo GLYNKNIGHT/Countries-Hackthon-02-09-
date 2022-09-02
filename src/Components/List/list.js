@@ -22,14 +22,14 @@ const List = ({ name, region }) => {
             const response = await fetch("https://restcountries.com/v3.1/all")
             const fetchCountries = await response.json()
             setCountries(fetchCountries)
-            console.log(fetchCountries)
+                        console.log(fetchCountries)
         }
         
         const fetchSearch = async() => {
             const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
             const fetchCountries = await response.json()
-            setCountries(fetchCountries)
-            console.log(fetchCountries)
+           setCountries(fetchCountries)
+              console.log(fetchCountries)
         }
         
         // const fetchRegion = async() => {
@@ -63,23 +63,14 @@ const List = ({ name, region }) => {
         }
 
 
-        // for(let i = 0; i < countries.length; i++) {
-        //     if(countries[i].region === region){
-        //         filteredByRegion.push(countries[i])
-        //     }
-        // }
-        // setCountries(filteredByRegion)
-        // console.log('Filtered', filteredByRegion)
-
-        // if(name !== 'All') {
-        //     fetchRegion()
-        // }
-
+      
     }, [name, region])
 
-    
+   
+
+
     return<div className="list">
-        {countries.map((country) => <Link to='/country' state={{ from: {country} }} style={{ textDecoration: 'none', color: 'black'}}><Card
+        {countries.map((country) => <Link to={`/country/${country.name.common}`} state={{ from: {country} }} style={{ textDecoration: 'none', color: 'black'}}><Card
                         name={country.name.common} 
             flag={country.flags.png} 
             population={country.population} 

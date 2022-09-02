@@ -6,7 +6,7 @@ import {useState} from 'react'
 export default function Home(){
 
     const [searchState, setSearchState] = useState('')
-    const [regionState, setRegionState] = useState('')
+    const [regionState, setRegionState] = useState('All')
     
     
     function onInput(e){
@@ -16,6 +16,7 @@ export default function Home(){
     
     function onSelect(e){
       setRegionState(e.target.value)
+      e.preventDefault()
       console.log(regionState)
     }
     
@@ -28,7 +29,7 @@ return<div className="App">
   </header>
   <div className="content-display">
   <SearchBar onInput={onInput} onSelect={onSelect} />
-  <List/>
+  <List name={searchState} region={regionState}/>
   </div>
 </div>
 
