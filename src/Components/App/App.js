@@ -29,13 +29,14 @@ function onSelect(e){
 
   return (
     <>
-    <List />
+    
     <div className="App">
       <header className="App-header">
        <h3>Where in the world?</h3>
        
       </header>
       <SearchBar onInput={onInput} onSelect={onSelect} />
+      <List />
     </div>
     </>
   );

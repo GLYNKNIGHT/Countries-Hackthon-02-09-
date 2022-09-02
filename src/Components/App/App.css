@@ -47,3 +47,17 @@
   padding: 0 10px;
   /* padding-left: 10px; */
 }
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+.card{
+  background-color: aqua;
+  width:15vw;
+  
+
+
+}
