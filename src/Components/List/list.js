@@ -18,7 +18,7 @@ const List = () => {
 
 
     return<div className="list">
-        {countries.map((country) => <Link to='/country' state={{ from: {country} }}><Card
+        {countries.map((country) => <Link to='/country' state={{ from: {country} }} style={{ textDecoration: 'none', color: 'black'}}><Card
                         name={country.name.common} 
             flag={country.flags.png} 
             population={country.population} 

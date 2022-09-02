@@ -82,3 +82,8 @@ width:15vw ;
   object-fit:cover;
     }
 
+    .page {
+      padding-left: 5vw;
+      background-color:#d3d4d7 ;
+
+    }

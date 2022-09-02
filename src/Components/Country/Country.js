@@ -10,7 +10,7 @@ export default function CountryPage(){
     return<><div className='page'>
            <h1>{country.name.common}</h1>
           
-        </div>   
+          
         <img src={country.flags.png} alt={from.country.name} className='page-image'></img>
         <div className="page-text">
        
@@ -18,7 +18,7 @@ export default function CountryPage(){
         <p><strong>Region:</strong> {country.region}</p>
         <p><strong>Capital City:</strong> {country.capital}</p>
         <a href={country.maps.googleMaps} target='blank'> See on a map</a>
-
+</div>
     </div>
     </>
 }
