@@ -2,6 +2,9 @@ import React from "react";
 import  { useState, useEffect} from "react";
 import Card from "../Card/card";
 
+import {Link} from "react-router-dom";
+
+
 const List = ({ name, region }) => {
     const [countries, setCountries] = useState([])
     
@@ -11,6 +14,7 @@ const List = ({ name, region }) => {
 
     When user selects region, matching results should be returned.
     */
+
 
     useEffect(() => {
 
@@ -75,12 +79,12 @@ const List = ({ name, region }) => {
 
     
     return<div className="list">
-        {countries.map((country) => <Card 
-            name={country.name.common} 
+        {countries.map((country) => <Link to='/country' state={{ from: {country} }} style={{ textDecoration: 'none', color: 'black'}}><Card
+                        name={country.name.common} 
             flag={country.flags.png} 
             population={country.population} 
             capital={country.capital}
-            region={country.region}></Card>)}
+            region={country.region}></Card></Link>)}
     </div>
 }
 

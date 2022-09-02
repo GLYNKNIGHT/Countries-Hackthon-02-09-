@@ -1,14 +1,14 @@
-
 import React from "react";
-import List from "../List/list"
 import './App.css';
-import SearchBar from '../Search Bar/searchBar';
-import {useState} from 'react'
+import Home from "../Home/Home";
+import CountryPage from "../Country/Country";
+import { Routes, Route } from "react-router-dom";
 
 
 
 
 function App() {
+
 
  
 const [searchState, setSearchState] = useState('')
@@ -29,7 +29,10 @@ function onSelect(e){
 
   return (
     <>
-    
+    <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/country' element={<CountryPage/>}/>
+   </Routes>
     <div className="App">
       <header className="App-header">
        <h3>Where in the world?</h3>
@@ -41,6 +44,7 @@ function onSelect(e){
       </div>
     </div>
     </>
+
   );
 }
 
