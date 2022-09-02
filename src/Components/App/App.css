@@ -63,9 +63,15 @@
   height:40vh;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  
 }
+.card a{
+  text-decoration: none;
+}
+
 .card-text{
 padding-left: 1rem;
+
 }
 .image-container{
 height:40% ;
@@ -75,3 +81,4 @@ width:15vw ;
 .image-container img{
   object-fit:cover;
     }
+

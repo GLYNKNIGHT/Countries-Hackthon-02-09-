@@ -1,6 +1,8 @@
 import React from "react";
 import  { useState, useEffect} from "react";
 import Card from "../Card/card";
+import {Link} from "react-router-dom";
+
 const List = () => {
     const  [countries, setCountries] = useState([])
 
@@ -16,12 +18,12 @@ const List = () => {
 
 
     return<div className="list">
-        {countries.map((country) => <Card 
-            name={country.name.common} 
+        {countries.map((country) => <Link to='/country' state={{ from: {country} }}><Card
+                        name={country.name.common} 
             flag={country.flags.png} 
             population={country.population} 
             capital={country.capital}
-            region={country.region}></Card>)}
+            region={country.region}></Card></Link>)}
     </div>
 }
 
