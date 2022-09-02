@@ -1,8 +1,15 @@
+
+import React from "react";
+import List from "../List/list"
 import './App.css';
 import SearchBar from '../Search Bar/searchBar';
 import {useState} from 'react'
 
+
+
+
 function App() {
+
  
 const [searchState, setSearchState] = useState('')
 const [regionState, setRegionState] = useState('')
@@ -19,7 +26,10 @@ function onSelect(e){
 }
 
 
+
   return (
+    <>
+    <List />
     <div className="App">
       <header className="App-header">
        <h3>Where in the world?</h3>
@@ -27,6 +37,7 @@ function onSelect(e){
       </header>
       <SearchBar onInput={onInput} onSelect={onSelect} />
     </div>
+    </>
   );
 }
 
