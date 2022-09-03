@@ -24,7 +24,12 @@ const List = ({ name, region }) => {
             setCountries(fetchCountries)
                         console.log(fetchCountries)
         }
-        
+        fetchCountryData()  
+    }, [])
+
+
+    /*
+    useEffect(()=>{
         const fetchSearch = async() => {
             const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
             const fetchCountries = await response.json()
@@ -32,17 +37,20 @@ const List = ({ name, region }) => {
               console.log(fetchCountries)
         }
         
+        fetchSearch()
+    }, [name])
+        */
+       
         // const fetchRegion = async() => {
         //     const response = await fetch(`https://restcountries.com/v3.1/region/${region}`)
         //     const fetchCountries = await response.json()
         //     setCountries(fetchCountries)
         //     console.log(fetchCountries)
         // }
-        
-        let filteredByRegion = []
+     /*   
+    let filteredByRegion = []
         if(name === '') {
-            fetchCountryData()
-            for(let i = 0; i < countries.length; i++) {
+                for(let i = 0; i < countries.length; i++) {
                 if(countries[i].region === region){
                     filteredByRegion.push(countries[i])
                 }
@@ -51,7 +59,7 @@ const List = ({ name, region }) => {
             console.log('Filtered', filteredByRegion)
             console.log('Region', region)
         } else {
-            fetchSearch()
+          
             for(let i = 0; i < countries.length; i++) {
                 if(countries[i].region === region){
                     filteredByRegion.push(countries[i])
@@ -62,13 +70,9 @@ const List = ({ name, region }) => {
             console.log('Region', region)
         }
 
-
-      
-    }, [name, region])
-
-   
-
-
+*/
+        
+  
     return<div className="list">
         {countries.map((country) => <Link to={`/country/${country.name.common}`} state={{ from: {country} }} style={{ textDecoration: 'none', color: 'black'}}><Card
                         name={country.name.common} 

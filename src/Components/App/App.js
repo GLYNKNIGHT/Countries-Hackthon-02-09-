@@ -5,12 +5,7 @@ import CountryPage from "../Country/Country";
 import { Routes, Route } from "react-router-dom";
 
 
-
-
 function App() {
-
-
- 
 
 
   return (
@@ -18,7 +13,7 @@ function App() {
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/country/:name' element={<CountryPage/>}/>
-   </Routes>
+    </Routes>
     
     </>
 

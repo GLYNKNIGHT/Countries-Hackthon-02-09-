@@ -78,11 +78,11 @@ padding-left: 1rem;
 
 .image-container{
 height:40% ;
-width:15vw ;
+
 }
 
 .image-container img{
-
+  width:100%;
   object-fit:cover;
     }
 
